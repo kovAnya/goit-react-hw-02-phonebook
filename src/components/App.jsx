@@ -22,6 +22,7 @@ export class App extends React.Component {
     const contactPhone = evt.currentTarget.elements.number.value;
 
     if (this.searchForDublicate(contactName)) {
+      evt.currentTarget.reset();
       return alert(`${contactName} is already in contacts.`);
     }
 
